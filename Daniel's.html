@@ -21,7 +21,7 @@
 <p>Please set how far you would like to run in miles</p>
 <p>Please set a pace you would like to run in minutes per mile</p>
 <!---user input setting Distance -->
-<form> 
+<form action = "index.html"> 
   <label for="fname">Distance:</label><br>
     <input id="Distance" type="number" ><br> 
 <!---user input setting pace-->
@@ -33,19 +33,22 @@
 
 
 <script>
-  //document.getElementById ("submitButton").addEventListener("click", intialSetup);
-  document.getElementById ("submitButton").innerHTML("click",Time(document.getElementById("Distance").value,document.getElementById("Pace").value));
-//converting to time
+  document.getElementById ("submitButton").addEventListener("click", intialSetup);
+
+//grabbing textbox values
 function intialSetup(){
-    var newPace=document.getElementbyId("Pace").valueOf(); 
-    window.alert(newPace);
-   
+    document.getElementById ("submitButton").innerHTML("click",Time(document.getElementById("Distance").value,document.getElementById("Pace").value));   
 }
 
+//converting user inputs to a time for Isochrone
 function Time(Distance,Pace){
-var length;
-length=Pace;
-window.alert(10);
+    var length;
+    lengthOfTime=Pace*Distance;
+    window.alert(lengthOfTime);
+    localStorage.setItem("timeToPass", lengthOfTime);
+    
+    window.alert(timeToPass);
+    return false;
 
 }
 
@@ -53,6 +56,7 @@ var finalAddy = '';
 function makeAddress(){
     var string1= 'index.html?';
     var string2= 'Time='+ Time.tostring();
+    
     finalAddy = string1.concat(string2);
     //<a href= finalAddy >a link</a>
 }
