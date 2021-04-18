@@ -17,26 +17,46 @@
 
 <style> h1 {text-align: center;}</style>
  <h1>Running Loops</h1>
-   
+ 
 <p>Please set how far you would like to run in miles</p>
 <p>Please set a pace you would like to run in minutes per mile</p>
 <!---user input setting Distance -->
-<form action="time you want to run for">
+<form action="distance you want to run for">
   <label for="fname">Distance:</label><br>
-  <input type="number" id="Distance" ><br>
+    <input type="number" id="Distance" ><br> 
 <!---user input setting pace-->
- <form action="Desired pace">
-<label for="fname">Pace:</label><br>
-<input type="number" id="Pace" ><br>
+ <form  action="Desired pace">
+    <label for="Gname">Pace:</label><br>
+        <input type="number" id="Pace" ><br>
 <!---setting submit button-->
-<input type="submit" value="Submit">
+ id= "submitButton" type="submit" value="Submit">
 </form>
-<!---converting user inputs into distance-->
-<script> 
-    function 
+
+
+<script>
+//converting to time
+document.getElementById ("submitButton").addEventListener("submit",Time(getElementById("Distance"),getElementById("Pace")))
+function Time(Distance,Pace){
+
+alert("fuckeen great")
+
+}
+
+var finalAddy = '';
+function makeAddress(){
+    var string1= 'index.html?';
+    var string2= 'Time='+ Time.tostring();
+    finalAddy = string1.concat(string2);
+    <a href= finalAddy >a link</a>
+}
+
+
+</script>
+    
+<!---changeing to new page-->
 
 </body>
- 
+
 </html>
 </body>
 </html>
