@@ -21,21 +21,26 @@
 <p>Please set how far you would like to run in miles</p>
 <p>Please set a pace you would like to run in minutes per mile</p>
 <!---user input setting Distance -->
-<form action="distance you want to run for">
+<form> 
   <label for="fname">Distance:</label><br>
-    <input type="number" id="Distance" ><br> 
+    <input id="Distance" type="number" ><br> 
 <!---user input setting pace-->
- <form  action="Desired pace">
     <label for="Gname">Pace:</label><br>
-        <input type="number" id="Pace" ><br>
+        <input id="Pace" type="number"  ><br><br>
 <!---setting submit button-->
- id= "submitButton" type="submit" value="Submit">
+ <button id = "submitButton" type = "button" onclick ="initalsetup()">newButton </button>
 </form>
 
 
 <script>
+  document.getElementById ("submitButton").addEventListener("submitButton",Time(getElementById("Distance"),getElementById("Pace")))
+
 //converting to time
-document.getElementById ("submitButton").addEventListener("submit",Time(getElementById("Distance"),getElementById("Pace")))
+function intialSetup(){
+    alert("fuckeen great")
+    document.getElementById ("submitButton").addEventListener("submitButton",Time(getElementById("Distance"),getElementById("Pace")))
+}
+
 function Time(Distance,Pace){
 
 alert("fuckeen great")
