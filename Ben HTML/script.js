@@ -1,3 +1,5 @@
+//This stores the TOTAL time from the previous page
+var totalTime =localStorage.getItem("timeToPass");
 mapboxgl.accessToken = 'pk.eyJ1Ijoidml6ZTMiLCJhIjoiY2tubHhlZXg2MGx5eTJxcGRmYWN1bnhuaCJ9.hw-AyeAElNogvAARTHWlXQ';
   
 navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {

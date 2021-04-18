@@ -15,20 +15,69 @@
  
 <body>
 
-<style> h1 {text-align: center;}</style>
+<style> 
+    h1 {text-align: center;}
+    .container 
+    {
+        text-align:center;
+        padding: 16px;
+    }
+    button 
+    {
+        background-color: #389e3b;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+    }
+    button:hover 
+    {
+        opacity: 0.8;
+    }
+    .imgcontainer
+    {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+    img.avatar 
+        {
+            width: 40%;
+            border-radius: 50%;
+        }
+
+
+</style>
  <h1>Running Loops</h1>
  
-<p>Please set how far you would like to run in miles</p>
-<p>Please set a pace you would like to run in minutes per mile</p>
+ <div style = "text-align:center"><p>Enter the total distance you would like to run</p>
+<p>Set your running pace in minutes/mile</p></div>
 <!---user input setting Distance -->
-<form action = "index.html"> 
-  <label for="fname">Distance:</label><br>
-    <input id="Distance" type="number" ><br> 
-<!---user input setting pace-->
-    <label for="Gname">Pace:</label><br>
+
+<!-- !!!!!!!!!!!!!!!!! This needs to be set to the url we want the user to be sent to...-->
+
+<form action = "Ben HTML/index.html"> 
+    
+    <div class = "container">
+        <!--UserInput for Distance-->
+        <label for="dInput">Distance:</label><br>
+        <input id="Distance" type="number" ><br>
+        <!--UserInput for Pace-->
+        <label for="pInput">Pace:</label><br>
         <input id="Pace" type="number"  ><br><br>
+        <!--Button to submit user's input and take them to map page-->
+        <button id = "submitButton" type = "submit" >Confirm Values </button>
+       
+    </div>
+    <div class="imgcontainer">
+        <img src="https://lh3.googleusercontent.com/tP4xWvVPY4K8EYFQB2IXqRgEBahUuYs1I2S8WasFmKs6qb_UWkOmHXBrD1kpCvoGaL3iTOxRCrhK9DQFiSfy8KWxTP55i1vML1sL_VRne9G9LWW16C1KOXUGTv2LmumOaiYzq6BxH7ODN6L-J0PFgu33GAxxN0ta5hn3h6Ka4jGy0Sir7CT0gzjwA9jYCY0R65aW6shAV9vd_0-Ywn5_zsJrsbY0fw5qq5ajp7OcgFlHq6VK0tt6iDvSEvIElJfP7I0TtR_Vffw2IuJwyyOd6irQJYFQvznw4_5PCG_YwZ6mJ5lMzH-1bIXEpz3O3Q-K8mXBjUwvaJswpRxqMHNTvHUoXE6NlPOlbGrsrj-BrvGNyfE_lMpdZBAHD-GGYYn-kqRNWtreq-K64WWaBIGGCcGM9jYIiK_2BJ41d3ON2okbwncN1VNouvpnNbE82M7hjv54uy2CnqONfeaDBlsTZDOndrkjUxPfSHk-S4SFHnGMY96dMBWVSR8g2Onw_iVCuFC99QxTrlYPbHxsXxGj7XiqqpEO8Bv9nqT69ggIbR1TLTnsmAx4JD8ep-uwXFSJMrGUJs0wCLna9_hH4nf3lME8a5t7s2nu9FZdJbZmFeSEKhmvYdZDWUYBY1yL56_PYAkQGmeLJpcSSjcQ4ZqAAzQ0_HzvOLHKOojAiAYm6vjMz6XRPNNSs_r_Gow3mo9nGJ40uC8DxPTbQCghSm_buIuB=w598-h499-no?authuser=0" alt="RunningMan" class="avatar">
+    </div>
+  
+<!---user input setting pace-->
+    
 <!---setting submit button-->
- <button id = "submitButton" type = "button" >newButton </button>
+ 
 </form>
 
 
@@ -44,29 +93,23 @@ function intialSetup(){
 function Time(Distance,Pace){
     var length;
     lengthOfTime=Pace*Distance;
-    window.alert(lengthOfTime);
     localStorage.setItem("timeToPass", lengthOfTime);
     
     window.alert(timeToPass);
     return false;
 
 }
-
-var finalAddy = '';
+//can be removed???
+/*Zvar finalAddy = '';
 function makeAddress(){
     var string1= 'index.html?';
     var string2= 'Time='+ Time.tostring();
     
     finalAddy = string1.concat(string2);
-}
-
-
+    //<a href= finalAddy >a link</a>
+}*/
 </script>
-    
-<!---changeing to new page-->
-
 </body>
-
 </html>
 </body>
 </html>
