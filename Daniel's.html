@@ -33,13 +33,13 @@
 
 
 <script>
-  document.getElementById ("submitButton").addEventListener("click", intialSetup);
-
+  //document.getElementById ("submitButton").addEventListener("click", intialSetup);
+  document.getElementById ("submitButton").innerHTML("click",Time(document.getElementById("Distance").value,document.getElementById("Pace").value));
 //converting to time
 function intialSetup(){
     var newPace=document.getElementbyId("Pace").valueOf(); 
     window.alert(newPace);
-    document.getElementById ("submitButton").innerHTML("click",Time(document.getElementById("Distance"),document.getElementById("Pace")));
+   
 }
 
 function Time(Distance,Pace){
