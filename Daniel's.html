@@ -28,22 +28,24 @@
     <label for="Gname">Pace:</label><br>
         <input id="Pace" type="number"  ><br><br>
 <!---setting submit button-->
- <button id = "submitButton" type = "button" onclick ="initalsetup()">newButton </button>
+ <button id = "submitButton" type = "button" >newButton </button>
 </form>
 
 
 <script>
-  document.getElementById ("submitButton").addEventListener("submitButton",Time(getElementById("Distance"),getElementById("Pace")))
+  document.getElementById ("submitButton").addEventListener("click", intialSetup);
 
 //converting to time
 function intialSetup(){
-    alert("fuckeen great")
-    document.getElementById ("submitButton").addEventListener("submitButton",Time(getElementById("Distance"),getElementById("Pace")))
+    var newPace=document.getElementbyId("Pace").valueOf(); 
+    window.alert(newPace);
+    document.getElementById ("submitButton").innerHTML("click",Time(document.getElementById("Distance"),document.getElementById("Pace")));
 }
 
 function Time(Distance,Pace){
-
-alert("fuckeen great")
+var length;
+length=Pace;
+window.alert(10);
 
 }
 
@@ -52,7 +54,7 @@ function makeAddress(){
     var string1= 'index.html?';
     var string2= 'Time='+ Time.tostring();
     finalAddy = string1.concat(string2);
-    <a href= finalAddy >a link</a>
+    //<a href= finalAddy >a link</a>
 }
 
 
