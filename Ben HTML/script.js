@@ -29,5 +29,14 @@ var directions = new MapboxDirections({
 });
 
 map.addControl(directions, 'top-left');
-map.addControl(lo)
+
+// Add geolocate control to the map.
+map.addControl(
+    new mapboxgl.GeolocateControl({
+        positionOptions: {
+        enableHighAccuracy: true
+        },
+        trackUserLocation: true
+        })
+    );
 }
